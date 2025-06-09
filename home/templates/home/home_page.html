@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block extra_css %}
+<link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+{% endblock extra_css %}
+
+{% block content %}
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top" style="font-style: italic; color: orange;">SPEED SERVO</a>
+        <a class="navbar-brand" href="#page-top">首页</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                <li class="nav-item"><a class="nav-link" href="#services">服务</a></li>
+                <li class="nav-item"><a class="nav-link" href="#software">软件</a></li>
+                <li class="nav-item"><a class="nav-link" href="#automation">工业自动化</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">关于我们</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Masthead-->
+<header class="masthead">
+    <!-- 背景视频（PC端显示） -->
+    <video autoplay muted loop playsinline class="masthead-video d-none d-md-block">
+        <source src="{% static 'img/header-bg.webm' %}" type="video/webm">
+        <source src="{% static 'img/header-bg.mp4' %}" type="video/mp4">
+        您的浏览器不支持视频播放。
+    </video>
+
+    <!-- 背景图片（移动端显示） -->
+    <div class="masthead-img d-block d-md-none" style="background-image: url('{% static 'img/header-bg-mobile.jpg' %}');"></div>
+
+    <!-- 半透明遮罩 -->
+    <div class="masthead-overlay"></div>
+
+    <!-- 内容 -->
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-white font-weight-bold">欢迎来到我们的网站</h1>
+                <hr class="divider" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 mb-5">我们专注于工业自动化、软件开发与智能解决方案，助力您的企业实现数字化升级。</p>
+                <a class="btn btn-primary btn-xl" href="#about">了解更多</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!-- Services Section -->
+<section class="page-section" id="services">
+    <div class="container px-4 px-lg-5">
+        <h2 class="text-center mt-0">我们的服务</h2>
+        <hr class="divider" />
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">方案定制</h3>s
+                    <p class="text-muted mb-0">根据客户需求，量身打造智能化解决方案。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">系统集成</h3>
+                    <p class="text-muted mb-0">整合软硬件系统，提升企业整体运营效率。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">智能工厂</h3>
+                    <p class="text-muted mb-0">打造智能生产环境，推动工业4.0升级。</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">技术支持</h3>
+                    <p class="text-muted mb-0">专业团队提供全方位技术支持与维护。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Software Section -->
+<section class="page-section" id="software">
+    <div class="container px-4 px-lg-5 text-center">
+        <h2 class="mt-0">软件解决方案</h2>
+        <hr class="divider" />
+        <p class="text-muted mb-5">我们提供高效、可靠、可扩展的软件产品与定制化开发服务，助力企业数字化转型。</p>
+    </div>
+</section>
+
+<!-- Industrial Automation Section -->
+<section class="page-section" id="automation">
+    <div class="container px-4 px-lg-5 text-center">
+        <h2 class="mt-0">工业自动化</h2>
+        <hr class="divider" />
+        <p class="text-muted mb-5">从智能制造到设备联网，我们提供全方位工业自动化解决方案，助力企业智能升级。</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="page-section bg-primary" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="text-white mt-0">关于我们</h2>
+                <hr class="divider divider-light" />
+                <p class="text-white-75 mb-4">我们是一家专注于工业自动化、软件开发、系统集成的高科技企业，致力于为客户提供创新高效的解决方案。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="page-section" id="contact">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6 text-center">
+                <h2 class="mt-0">联系我们</h2>
+                <hr class="divider" />
+                <p class="text-muted mb-5">准备好与我们合作了吗？填写信息，我们会尽快与您联系！</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5">
+        <div class="small text-center text-muted">版权所有 &copy; 2025 - 公司名称</div>
+    </div>
+</footer>
+{% endblock content %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+{% endblock extra_js %}
